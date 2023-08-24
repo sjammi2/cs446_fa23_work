@@ -2,7 +2,7 @@ import numpy as np
 import torch 
 
 def numpy_squares(k):
-    return np.square(np.arange(k))
+    return np.arange(k)**2
 
 def torch_squares(k):
-    return torch.square(torch.arange(k))
+    return torch.arange(k)**2
