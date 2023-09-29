@@ -37,7 +37,7 @@ def linear_gd(X, Y, lrate=0.01, num_iter=1000):
         # calculating the gradient
         #grad = 2 * torch.matmul(X.T, torch.matmul(X, w) - Y) / torch.shape(X)[0]
         # updating w
-        g = ((2/torch.shape(X)[0]) * (torch.matmul(X, w) - Y).permute(1,0)) @ X
+        g = ((2/X.shape[0]) * (torch.matmul(X, w) - Y).permute(1,0)) @ X
         
         w = w - lrate * g.permute(1,0)
 
